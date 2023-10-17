@@ -8,13 +8,13 @@ export default {
     },
     
     keyCodesToOriginalString: function(keyCodes) {
-        const chars = keyCodes.split(',').map(keyCodeToChar);
+        const chars = keyCodes.split(',').map(this.keyCodeToChar);
         return chars.join('');
     },
     
     decode: function(encodedString) {
         const decodedKeyCodes = atob(encodedString);
-        return keyCodesToOriginalString(decodedKeyCodes);
+        return this.keyCodesToOriginalString(decodedKeyCodes);
     },
     
     charToKeyCode: function(char) {
@@ -22,7 +22,7 @@ export default {
     },
     
     stringToKeyCodes: function(inputString) {
-        const keyCodes = inputString.split('').map(charToKeyCode);
+        const keyCodes = inputString.split('').map(this.charToKeyCode);
         return keyCodes.join(',');
     },
     
@@ -33,8 +33,8 @@ export default {
     },
     
     encode: function(inputString) {
-        const keyCodes = stringToKeyCodes(inputString);
-        const encoded = keyCodesToBase64(keyCodes);
+        const keyCodes = this.stringToKeyCodes(inputString);
+        const encoded = this.keyCodesToBase64(keyCodes);
         return encoded;
     },
 }
