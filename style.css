@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: 0.3s;
+}
+
+body {
+    background-color: #202123;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    font-size: 23pt;
+}
+
+h2 {
+    font-size: 18pt;
+}
+
+.welcome-text-one {
+    margin-bottom: 30px;
+}
+
+.welcome-text-two {
+    margin-bottom: 20px;
+}
+
+.welcome-text-three {
+    margin-bottom: 30px;
+}
+
+.new-user {
+    width: 600px;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.65);
+    border-radius: 12.5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.save-container {
+    width: 600px;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.65);
+    border-radius: 12.5px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    transition: 0.33s;
+    display: none; /* Obviously we need them to enter the password or create save first */
+}
+
+.creation-container {
+    width: 600px;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.65);
+    border-radius: 12.5px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: 0.33s;
+    display: none;
+    opacity: 0;
+}
+
+.creation-container > input[type=password], .creation-container > input[type=text] {
+    margin: 10px;
+}
+
+.pass {
+    cursor: pointer;
+}
+
+input[type=password], input[type=text] {
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    border: 3.5px solid rgba(56, 56, 56, 0.521);
+    width: 300px;
+    transition: 0.75s;
+}
+
+.login-note {
+    margin-bottom: 30px;
+}
+
+.new-user > button, .save-container > button, .save-container > .div > button, .creation-container > button {
+    width: 300px;
+    background: none;
+    font-size: 30pt;
+    color: white;
+    border-radius: 7px;
+    border: 3px solid white;
+    padding: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Rubik', sans-serif;
+    transition: 0.3s;
+}
+
+.new-user > button:hover, .save-container > button:hover, .save-container > .div > button:hover, .creation-container > button:hover {
+    scale: 1.09;
+}
+
+.new-user > button:active, .save-container > button:active, .save-container > .div > button:active, .creation-container > button:active {
+    transform: translateY(5px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border: 1px solid rgba(0, 0, 0, 0.5); 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.div {
+    transition: 0.5s;
+}
+
+.pass-container {
+    margin-bottom: 20px;
+}
+
+.creation-container > h1 {
+    margin-bottom: 7.5px;
+}
+
+.addOpen {
+    text-align: right;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    display: none;
+    z-index: 10;
+}
+
+.addOpen:hover {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.addClose {
+    text-align: left;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    position: absolute;
+    top: 0px;
+}
+
+.addClose:hover {
+    color: rgba(255, 255, 255, 0.65);
+}

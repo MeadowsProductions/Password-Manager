@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Password Manager | Basic</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" defer src="index.js"></script>
+        <link rel="icon" href="icon.png">
+    </head>
+    <body>
+        <div class="new-user">
+            <h1 class="welcome-text-one">Welcome to a basic password manager!</h1>
+            <h2 class="welcome-text-two">This just saves your passwords without any sign up needed!</h2>
+            <h2 class="welcome-text-three">Just create your password to start.</h2>
+            <input type="password" placeholder="Create a password"><br><br>
+            <input type="password" placeholder="Repeat it"><br><br>
+            <button>Confirm</button>
+        </div>
+        <div class="save-container">
+            <h1 class="addOpen">+</h1>
+            <div class="div">
+                <h1 class="login-note">Please verify your identity first.</h1>
+                <input type="password"><br>
+                <button>Submit</button>
+            </div>
+        </div>
+        <div class="creation-container">
+            <h1 class="addClose">-</h1>
+            <h1>Add Passwords</h1><br>
+            <input type="text" class="site" placeholder="Website"><br>
+            <input type="text" class="name" placeholder="Username"><br>
+            <input type="password" class="pass" placeholder="Password" maxlength="50"><br>
+            <button>Create!</button>
+        </div>
+    </body>
+</html>
