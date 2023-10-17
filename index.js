@@ -19,12 +19,6 @@ function $(e) {
 function $$(e) {
     return document.querySelectorAll(e);
 }
-function encode(what) {
-    return btoa(what);
-}
-function decode(what) {
-    return atob(what);
-}
 function commas(num) {
     return parseFloat(num).toLocaleString();
 }
@@ -179,4 +173,4 @@ creationOpen.addEventListener("click", () => {
     }, 350)
 })
 
-print(Cipher.encode("abc"))
+print(Cipher.encode("Hello, world!"));
