@@ -64,7 +64,7 @@ if(load === null) {
 // User creation
 passConfirm.addEventListener("click", () => {
     if(passChoice[0].value != "" && passChoice[1].value != "" && passChoice[0].value === passChoice[1].value && passChoice[0].value.length >= 4) {
-        load.pass = encode(passChoice[0].value);
+        load.pass = Cipher.encode(passChoice[0].value);
         save(load);
         alert("Successfully set password!");
         init();
@@ -89,7 +89,7 @@ function init() {
 // --------------------------------
 
 function verify(pass) {
-    if(pass === decode(load.pass)) {
+    if(pass === Cipher.decode(load.pass)) {
         $(".div").style.opacity = "0";
         setTimeout(() => {
             $(".div").innerHTML = "";
@@ -129,7 +129,7 @@ function update(save) {
     }
 }
 function reveal(el, pass) {
-    el.innerText = "Pass: " + decode(pass);
+    el.innerText = "Pass: " + Cipher.decode(pass);
     setTimeout(() => {
         el.innerText = "[Censored]";
     }, 7500)
@@ -144,7 +144,7 @@ function reveal(el, pass) {
 addButton.addEventListener("click", () => {
     let construct = {
         User: userInput.value,
-        Pass: encode(passInput.value),
+        Pass: Cipher.encode(passInput.value),
     }
     load.array[siteInput.value] = construct;
     save(load);
@@ -174,3 +174,4 @@ creationOpen.addEventListener("click", () => {
 })
 
 print(Cipher.encode("Hello, world!"));
+print(Cipher.decode("NzIsMTAxLDEwOCwxMDgsMTExLDQ0LDMyLDExOSwxMTEsMTE0LDEwOCwxMDAsMzM="));
